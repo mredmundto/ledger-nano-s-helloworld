@@ -31,6 +31,7 @@ LedgerWalletSubproviderFactory()
 		eth.getTransactionCount(account[0]).then((nonce) => {
 			console.log('nonce', nonce)
 			
+			// sending
 			// web3.eth.sendTransaction({
 		 //      from: account[0],
 		 //      to: '0x42AA3D8a40C9Bd501f92617a280a539f3Cb6957A',
@@ -39,8 +40,11 @@ LedgerWalletSubproviderFactory()
 		 //      gasPrice: new BN('20000000000'),
 		 //      nonce: nonce,
 		 //    })
+
+		 	// sending erc20 token
 		    var value = 321
 		    var decimal = 18
+		    // '0xa9059cbb' == transfer 
 		 	var data = '0xa9059cbb' + padLeft('42AA3D8a40C9Bd501f92617a280a539f3Cb6957A', 64) + padLeft(new BigNumber(value).times(new BigNumber(10).pow(decimal)).toString(16), 64);
 
 		 	console.log(data)
