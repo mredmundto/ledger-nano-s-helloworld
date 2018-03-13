@@ -1,3 +1,3 @@
 To run 
-npm install 
-node test.js
+`npm install 
+node test.js`
